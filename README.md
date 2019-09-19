@@ -1,5 +1,5 @@
 多页模板
-#请注意注意  
+# 请注意注意  
 请使用npm run build-clean来初始化项目，后续使用npm run build
 
 ### 特殊文件说明
