@@ -1,5 +1,7 @@
-/** * $size：实际px宽度 * $deviceWidth 来源：设计稿的宽度/10,默认设计稿宽度750px */
+/** * $size：实际px宽度 * $deviceWidth 来源：设计稿的宽度/10,默认设计稿宽度750px 
+******更改$deviceWidth 需更改：public/script/tabao-rem.js
+*/
 @function size($size: 0, $deviceWidth: 75) {
-	@return unquote((($size / $deviceWidth) - 0.0001) + 'rem');
+	@return unquote((($size / $deviceWidth) - 0.001) + 'rem');
 }
 
