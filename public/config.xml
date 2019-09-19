@@ -1,6 +1,6 @@
-<!-- 请填写自己的config.xml配置 -->
 <?xml version="1.0" encoding="UTF-8"?>
-<widget id="" version="0.0.1">
+<!-- 请填写自己的config.xml配置 -->
+<widget id="A6007562535497" version="0.0.1">
 	<name>ProjectFirst</name>
 	<content src="index.html"/>
 	<access origin="*"/>
