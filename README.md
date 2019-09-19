@@ -16,3 +16,5 @@ src/config/entrys：初始运行npm run dev/build，生成的目录，里面包�
 * 支持es async/await
 * axios封装
 * vantui按需加载
+* 全局scss
+* 淘宝rem适配方案
