@@ -12,3 +12,7 @@ src/config/entrys：初始运行npm run dev/build，生成的目录，里面包�
 
 ### 特性
 * 基于vue3.0构建工具
+* 支持plugin-proposal-optional-chaining
+* 支持es async/await
+* axios封装
+* vantui按需加载
