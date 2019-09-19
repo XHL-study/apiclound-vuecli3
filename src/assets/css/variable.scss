@@ -1,0 +1,5 @@
+/** * $size：实际px宽度 * $deviceWidth 来源：设计稿的宽度/10,默认设计稿宽度750px */
+@function size($size: 0, $deviceWidth: 75) {
+	@return unquote((($size / $deviceWidth) - 0.0001) + 'rem');
+}
+

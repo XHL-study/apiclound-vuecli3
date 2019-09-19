@@ -126,15 +126,16 @@ var vueConfig = {
 						assetsKeys.map(item => {
 							if (/.js/.test(item)) {
 								const source = assets[item]['_source'];
-								source.children.map(ci => {
-									if (typeof ci == 'object') {
-										const value = ci._value;
-										if (regExp.test(value) && value.indexOf("(window.____p())") < 0) {
-											const v = value.replace(regExp, regExpStr + '(window.____p())');
-											ci._value = v;
+								if (source && source.children)
+									source.children.map(ci => {
+										if (typeof ci == 'object') {
+											const value = ci._value;
+											if (regExp.test(value) && value.indexOf("(window.____p())") < 0) {
+												const v = value.replace(regExp, regExpStr + '(window.____p())');
+												ci._value = v;
+											}
 										}
-									}
-								});
+									});
 							}
 						});
 					});
@@ -187,8 +188,13 @@ var vueConfig = {
 	pluginOptions: {
 		webpackBundleAnalyzer: {
 			openAnalyzer: false
+		},
+		'style-resources-loader': {
+			preProcessor: 'scss',
+			patterns: ['src/assets/css/variable.scss']
 		}
 	},
-	transpileDependencies: [],
+	//使用babel转译以下模块
+	transpileDependencies: ['mini-css-extract-plugin', 'sort-keys', 'prepend-http']
 }
 module.exports = vueConfig;

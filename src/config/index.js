@@ -1,4 +1,8 @@
 import Vue from 'vue';
+
+//全局css
+import '@/assets/css/main.css';
+
 //ui框架配置
 import './ui'
 
