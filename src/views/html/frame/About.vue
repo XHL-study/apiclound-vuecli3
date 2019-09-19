@@ -1,6 +1,5 @@
 <template>
 	<div class="about">
-		<h1>测试 http-https 哦 hehe</h1>
 		<van-button type="default">默认按钮</van-button>
 		<br />
 		<van-button type="primary">主要按钮</van-button>
@@ -9,61 +8,11 @@
 		<br />
 
 		<van-button type="primary">页面地址</van-button>
-		<br />
-{{date}}
-
-{{date}}
-
-{{date}}
-
-{{date}}
-
-{{date}}
-
-{{date}}
-
-{{date}}
-
-{{date}}
-
-{{date}}
-
-{{date}}
-
-{{date}}
-
-{{date}}
-
-{{date}}
-
 		<div v-for="item in 10" id="test-echarts" style="width: 100%;height: 80px;">
 			{{date}}{{item}}
 		</div>
 		<div id="test-echarts" style="width: 100%;height: 300px;">
 		</div>
-{{date}}
-
-{{date}}
-
-{{dt}}
-
-{{dt}}
-
-{{dt}}
-
-{{dt}}
-
-{{dt}}
-
-{{dt}}
-
-{{dt}}
-
-{{dt}}
-
-{{dt}}
-
-{{dt}}
 
 		<img src="../../../../public/image/img2.png"/>
 

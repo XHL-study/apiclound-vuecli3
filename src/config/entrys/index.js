@@ -7,6 +7,9 @@
 			new Vue({ render: h => h(App) }).$mount('#app');
 		}
 	} else {
-		new Vue({ render: h => h(App) }).$mount('#app');
+		//调试模式延时,等待apiclound api加载完成
+		setTimeout(() => {
+			new Vue({ render: h => h(App) }).$mount('#app');
+		}, 100);
 	}
 	
