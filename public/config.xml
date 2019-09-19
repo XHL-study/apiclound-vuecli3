@@ -1,1 +1,27 @@
 <!-- 请填写自己的config.xml配置 -->
+<?xml version="1.0" encoding="UTF-8"?>
+<widget id="" version="0.0.1">
+	<name>ProjectFirst</name>
+	<content src="index.html"/>
+	<access origin="*"/>
+	<preference name="debug" value="true"/>
+	<preference name="appBackground" value="rgba(0,0,0,0.0)"/>
+	<preference name="windowBackground" value="rgba(255,255,255,1.0)"/>
+	<preference name="frameBackgroundColor" value="rgba(255,255,255,1.0)"/>
+	<preference name="urlScheme" value="baby365scheme"/>
+	<preference name="smartUpdate" value="false"/>
+	<preference name="statusBarAppearance" value="true" />
+	<preference name="softInputMode" value="resize"/>
+	<permission name="call" />
+	<permission name="readPhoneState" />
+	<permission name="sms" />
+	<permission name="camera" />
+	<permission name="record" />
+	<permission name="location" />
+	<permission name="fileSystem" />
+	<permission name="internet" />
+	<permission name="bootCompleted" />
+	<permission name="hardware" />
+	<permission name="contact" />
+
+</widget>
