@@ -42,7 +42,19 @@ function deleteFolderRecursive(path) {
 			if (fs.statSync(curPath).isDirectory()) { // recurse
 				deleteFolderRecursive(curPath);
 			} else { // change file add old
-				fs.unlinkSync(curPath);				
+				// fs.unlinkSync(curPath);
+				// if (/-old.js/.test(curPath)) { //删除上一次重命名的entry js文件
+				fs.unlinkSync(curPath);
+				// }
+				// const file = curPath.replace(/.js/, '-old.js');
+				// //重命名上一次的entry js文件
+				// fs.rename(curPath, file, function(err) {
+				// 	if (err) {
+				// 		console.log("重命名失败！");
+				// 	} else {
+				// 		console.log("重命名成功！");
+				// 	}
+				// });
 			}
 		});
 	}
@@ -114,7 +126,10 @@ function buildEntryData(file) {
 			new Vue({ render: h => h(App) }).$mount('#app');
 		}
 	} else {
-		new Vue({ render: h => h(App) }).$mount('#app');
+		//调试模式延时,等待apiclound api加载完成
+		setTimeout(() => {
+			new Vue({ render: h => h(App) }).$mount('#app');
+		}, 100);
 	}
 	`;
 }

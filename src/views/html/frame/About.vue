@@ -10,13 +10,63 @@
 
 		<van-button type="primary">页面地址</van-button>
 		<br />
+{{date}}
 
+{{date}}
 
+{{date}}
+
+{{date}}
+
+{{date}}
+
+{{date}}
+
+{{date}}
+
+{{date}}
+
+{{date}}
+
+{{date}}
+
+{{date}}
+
+{{date}}
+
+{{date}}
+
+		<div v-for="item in 10" id="test-echarts" style="width: 100%;height: 80px;">
+			{{date}}{{item}}
+		</div>
 		<div id="test-echarts" style="width: 100%;height: 300px;">
 		</div>
+{{date}}
+
+{{date}}
+
+{{dt}}
+
+{{dt}}
+
+{{dt}}
+
+{{dt}}
+
+{{dt}}
+
+{{dt}}
+
+{{dt}}
+
+{{dt}}
+
+{{dt}}
+
+{{dt}}
+
 		<img src="../../../../public/image/img2.png"/>
 
-		store count: {{count}}
 	</div>
 </template>
 
@@ -26,11 +76,18 @@
 		data() {
 			return {
 				time: "",
+				date:Date.now(),
+				dt:new Date(),
 			}
 		},
 		computed: {
 		},
 		created: function() {
+			api.toast({
+			    msg: '网络错误',
+			    duration: 2000,
+			    location: 'bottom'
+			});
 		},
 		mounted: function() {},
 		methods: {
@@ -38,16 +95,6 @@
 				alert(location.href)
 			},
 			getBaiDu: function() {
-				this.$http({
-					url: this.$api.weatherUrl,
-					data: {
-						appKey: "7493be352c174e1f9ff2642f5cdbe22a"
-					}
-				}).then((dt) => {
-					console.log("成功：", dt);
-				}).catch((dt) => {
-					console.log("错误：", dt);
-				})
 			},
 
 		}
