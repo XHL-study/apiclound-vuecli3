@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<%
+ 
+ const head =  htmlWebpackPlugin.options.head;
+ const title =  htmlWebpackPlugin.options.title;
+ 
+ let headDoms = [];
+ for(let k in head){
+	let h = head[k];
+	headDoms.push(`<${k}`);
+	for(let j in h){
+		for(let d in h[j]){
+			headDoms.push(` ${d}="${h[j][d]}" `);
+		}
+	}
+	headDoms.push(`/>`);
+ }
+ %>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" href="https://at.alicdn.com/t/font_1217090_dewhzf7vbkp.css" />
+		<!-- css chunk -->
+		<% 	htmlWebpackPlugin.files.css.forEach(function(file) { %>
+		<link rel="stylesheet" type="text/css" href="<%= htmlWebpackPlugin.options.publicPath %><%= file %>" />
+		<% }) %>
+		<!-- 设置head -->
+		<%= headDoms.join('') %>
+		<!-- 标题 -->
+		<title>
+			<%= title %>
+		</title>
+	</head>
+	<body>
+		<div id="app"></div>
+		<!-- js chunk -->
+		<% 	htmlWebpackPlugin.files.js.forEach(function(file) { %>
+		<script data-static = "<%= htmlWebpackPlugin.options.publicPath %>" src="<%= htmlWebpackPlugin.options.publicPath %><%= file %>"></script>
+		<% }) %>
+	</body>
+</html>
