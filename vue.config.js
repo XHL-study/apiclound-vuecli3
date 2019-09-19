@@ -104,8 +104,8 @@ var vueConfig = {
 								const source = data.existsAt;
 								const emitted = data.emitted;
 								let value = data._value;
-								if (emitted && /{e.exports=(.).p/.test(value)) {
-									const v = value.replace(/{e.exports=(.).p/g, '{e.exports=$1.p+(window.____p())');
+								if (emitted && /{(.).exports=(.).p/.test(value)) {
+									const v = value.replace(/{(.).exports=(.).p/g, '{$1.exports=$2.p+(window.____p())');
 									fs.writeFile(source, v, (e) => {});
 								}
 							}

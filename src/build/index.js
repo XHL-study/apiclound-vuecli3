@@ -13,7 +13,7 @@ publicPath =  outRelativePath ? './' : publicPath;
 //调试模式端口地址
 const devServer = {
 	host: '192.168.3.138',//ip
-	port: 8086, // 端口号
+	port: 8089, // 端口号
 	https: false,//是否开启https
 };
 
