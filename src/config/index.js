@@ -1,5 +1,8 @@
 import Vue from 'vue';
 
+//淘宝rem适配
+import '@/assets/js/taobao-rem.js'
+
 //ui框架配置
 import './ui'
 
